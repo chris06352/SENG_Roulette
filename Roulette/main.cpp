@@ -35,6 +35,28 @@ public:
     }
 };
 
+class FarbeSpiel : public RouletteSpiel {
+
+private:
+
+    int farbe;
+
+
+
+public:
+
+    FarbeSpiel(int f) : farbe(f) {}
+
+
+
+    bool gewonnen(int gewinnzahl) override {
+
+        return ((farbe == 2 && gewinnzahl % 2 == 1) || (farbe == 1 && gewinnzahl % 2 == 0));
+
+    }
+
+};
+
 
 int main() {
 
