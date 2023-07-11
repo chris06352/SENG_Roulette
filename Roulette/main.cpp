@@ -35,6 +35,7 @@ public:
     }
 };
 
+
 class FarbeSpiel : public RouletteSpiel {
 
 private:
@@ -57,6 +58,18 @@ public:
 
 };
 
+
+class GeradeUngeradeSpiel : public RouletteSpiel {
+private:
+    int geradeUngerade;
+
+public:
+    GeradeUngeradeSpiel(int gu) : geradeUngerade(gu) {}
+
+    bool gewonnen(int gewinnzahl) override {
+        return ((geradeUngerade == 1 && gewinnzahl % 2 == 0) || (geradeUngerade == 2 && gewinnzahl % 2 == 1));
+    }
+};
 
 int main() {
 
