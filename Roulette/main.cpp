@@ -58,7 +58,6 @@ public:
 
 };
 
-
 class GeradeUngeradeSpiel : public RouletteSpiel {
 private:
     int geradeUngerade;
